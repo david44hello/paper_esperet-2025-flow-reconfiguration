@@ -1,0 +1,946 @@
+{
+  "paper": [
+    {
+      "place": "Theorem 1.1(a) — modular flows",
+      "lines": "122–125",
+      "status": "PROVED",
+      "claim": "For every positive multiple k of 40, 48, or 66, M_k(G) is connected for every finite bridgeless multigraph G (loops allowed).",
+      "declarations": "Flow.Paper.thm_1_1_a",
+      "anchor": "thm:main-int",
+      "source_words": "M_k(G) is connected for every finite bridgeless multigraph G"
+    },
+    {
+      "place": "Theorem 1.1(b) — integer flows",
+      "lines": "122–126",
+      "status": "PROVED",
+      "claim": "For every positive multiple k of 40, 48, or 66, I_k(G) is connected for every finite bridgeless loopless multigraph G.",
+      "declarations": "Flow.Paper.thm_1_1_b",
+      "anchor": "thm:main-int",
+      "source_words": "I_k(G) is connected for every finite bridgeless loopless multigraph G"
+    },
+    {
+      "place": "Theorem 1.1 — k = 40 answers Problem 1.2",
+      "lines": "128",
+      "status": "PROVED",
+      "claim": "k = 40 satisfies k >= 5 and makes I_40(G) connected for every finite bridgeless loopless multigraph G.",
+      "declarations": "Flow.Paper.thm_1_1_k40",
+      "anchor": "thm:main-int",
+      "source_words": "In particular, k=40 answers Problem 1.2"
+    },
+    {
+      "place": "Theorem 1.2 — abelian group flows",
+      "lines": "131–133",
+      "status": "PROVED",
+      "claim": "For every finite abelian group Gamma not cyclic of prime-power order with a divisor 4 <= d <= |Gamma|/10, F(G, Gamma) is connected for every finite bridgeless multigraph G.",
+      "declarations": "Flow.Paper.thm_1_2",
+      "anchor": "thm:main-grp",
+      "source_words": "F(G,\\Gam) is connected for every finite bridgeless multigraph G"
+    },
+    {
+      "place": "Theorem 1.2 — orders 40, 44, 48, 50",
+      "lines": "132–133",
+      "status": "PROVED",
+      "claim": "F(G, Gamma) is connected for every finite abelian group of order 40, 44, 48, or 50.",
+      "declarations": "Flow.Paper.thm_1_2_orders_40_44_48_50",
+      "anchor": "thm:main-grp",
+      "source_words": "every abelian group \\Gam of order 40, 44, 48, or 50"
+    },
+    {
+      "place": "Theorem 1.3 — master theorem for step systems",
+      "lines": "143–145",
+      "status": "PROVED",
+      "claim": "Under |A| >= 10, |B| >= 4, (R1), (R2), (R3), and (AV), every nowhere-zero Gamma-flow is Sigma-joined to every target flow, any two nowhere-zero flows are Sigma-joined, and F(G, Gamma) is connected.",
+      "declarations": "Flow.Paper.thm_1_3",
+      "anchor": "thm:master",
+      "source_words": "every nowhere-zero \\Gam-flow is \\Sig-joined to every \\Gam-flow whose A-coordinate is nowhere zero"
+    },
+    {
+      "place": "Theorem 1.4 — Seymour-Tutte 6-flow theorem",
+      "lines": "169–171",
+      "status": "PROVED",
+      "claim": "Every finite bridgeless multigraph (loops allowed) admits a nowhere-zero flow in every finite abelian group of order at least 6.",
+      "declarations": "Flow.Paper.thm_1_4",
+      "anchor": "thm:seymour",
+      "source_words": "has a nowhere-zero flow with values in any finite abelian group of order at least 6"
+    },
+    {
+      "place": "Section 1 — trivial small groups",
+      "lines": "92",
+      "status": "PROVED",
+      "claim": "F(G, Gamma) is connected whenever |Gamma| <= 2.",
+      "declarations": "Flow.Paper.sec1_trivial_small_group",
+      "anchor": "sec:intro",
+      "source_words": "the trivial cases k=2 and |\\Gam|\\le 2 are always connected"
+    },
+    {
+      "place": "Section 1 — trivial integer 2-flows",
+      "lines": "92",
+      "status": "PROVED",
+      "claim": "I_2(G) is connected for every finite multigraph G.",
+      "declarations": "Flow.Paper.sec1_trivial_int_k2",
+      "anchor": "sec:intro",
+      "source_words": "I_2(G) has at most one component"
+    },
+    {
+      "place": "Section 1 — Z_3 counterexample",
+      "lines": "92",
+      "status": "PROVED",
+      "claim": "Z_3 fails on three parallel edges between two vertices.",
+      "declarations": "Flow.Paper.sec1_Z3_three_parallel_disconnected",
+      "anchor": "sec:intro",
+      "source_words": "three parallel edges between two vertices for \\Z_3"
+    },
+    {
+      "place": "Figure 1 caption — density 1 of covered orders",
+      "lines": "fig1 151",
+      "status": "PROVED",
+      "claim": "The set of orders covered by Theorem 1.2 has natural density 1.",
+      "declarations": "Flow.Paper.fig1_density_one",
+      "anchor": "fig:before-after",
+      "source_words": "with density 1 above 256"
+    },
+    {
+      "place": "Section 2 — cycle scalar flow",
+      "lines": "185",
+      "status": "PROVED",
+      "claim": "lambda * chi_C is a Gamma-flow for every directed cycle C and lambda in Gamma.",
+      "declarations": "Flow.Paper.sec2_cycle_smul_isFlow",
+      "anchor": "sec:lifting",
+      "source_words": "\\lambda\\chi_C is a \\Gam-flow for every \\lambda\\in\\Gam"
+    },
+    {
+      "place": "Section 2 — reorientation preserves flows",
+      "lines": "185",
+      "status": "PROVED",
+      "claim": "Reversing reference edge orientations and negating flow values preserves flows.",
+      "declarations": "Flow.Paper.sec2_reorient_preserves_flow",
+      "anchor": "sec:lifting",
+      "source_words": "Reversing the reference orientation of an edge e and negating all flow values on e preserves flows"
+    },
+    {
+      "place": "Section 2 — reorientation preserves moves",
+      "lines": "185",
+      "status": "PROVED",
+      "claim": "Reversing reference edge orientations preserves flow adjacency.",
+      "declarations": "Flow.Paper.sec2_reorient_preserves_flowMove",
+      "anchor": "sec:lifting",
+      "source_words": "preserves flows and adjacency"
+    },
+    {
+      "place": "Section 2 — move iff cycle support",
+      "lines": "187",
+      "status": "PROVED",
+      "claim": "Two nowhere-zero flows differ by a nonzero cycle multiple iff the support of their difference is a cycle.",
+      "declarations": "Flow.Paper.sec2_move_iff_supp_cycle",
+      "anchor": "sec:lifting",
+      "source_words": "equivalently if the support of their difference is a cycle"
+    },
+    {
+      "place": "Lemma 2.1(a) — fundamental cycle decomposition",
+      "lines": "193–196",
+      "status": "PROVED",
+      "claim": "Every A-flow has a unique fundamental-cycle representation with respect to any spanning forest and is a sum of cycle flows.",
+      "declarations": "Flow.Paper.lem_2_1_a",
+      "anchor": "lem:cycledec",
+      "source_words": "has the unique representation h=\\sum_{e\\notin E(T_0)} h(e)\\chi_{C_e}"
+    },
+    {
+      "place": "Lemma 2.1(b) — signed cycle decomposition",
+      "lines": "197–198",
+      "status": "PROVED",
+      "claim": "Every integer flow decomposes into sign-consistent directed cycles with multiplicity |h(e)|, edge-disjoint for {-1,0,1}-flows.",
+      "declarations": "Flow.Paper.lem_2_1_b",
+      "anchor": "lem:cycledec",
+      "source_words": "Signed cycle decomposition"
+    },
+    {
+      "place": "Lemma 2.2 — rounding",
+      "lines": "207–209",
+      "status": "PROVED",
+      "claim": "Every [0,1]-valued edge map with integer boundary rounds to a {0,1}-valued map with the same boundary preserving {0,1} edges.",
+      "declarations": "Flow.Paper.lem_2_2",
+      "anchor": "lem:rounding",
+      "source_words": "there exists z\\colon E(G)\\to\\{0,1\\} with \\partial z=\\partial x"
+    },
+    {
+      "place": "Corollary 2.3 — integer lifts",
+      "lines": "215–217",
+      "status": "PROVED",
+      "claim": "Every Z_k-flow lifts to an integer flow with |F(e)| <= k - 1 and identical zero set.",
+      "declarations": "Flow.Paper.cor_2_3",
+      "anchor": "cor:lifting",
+      "source_words": "there exists an integer flow F of G with F\\equiv f\\pmod k"
+    },
+    {
+      "place": "Lemma 2.4 — connected fibres",
+      "lines": "223–225",
+      "status": "PROVED",
+      "claim": "Integer lifts of a nowhere-zero Z_k-flow induce a connected subgraph of I_k(G).",
+      "declarations": "Flow.Paper.lem_2_4",
+      "anchor": "lem:fibres",
+      "source_words": "the integer lifts of f induce a connected subgraph of I_k(G)"
+    },
+    {
+      "place": "Lemma 2.6 — step of size 1",
+      "lines": "238–240",
+      "status": "PROVED",
+      "claim": "For every integer lift F of f, F + chi_C is an integer lift of f + chi_C.",
+      "declarations": "Flow.Paper.lem_2_6",
+      "anchor": "lem:step1",
+      "source_words": "the flow F+\\chi_C is an integer lift of f+\\chi_C"
+    },
+    {
+      "place": "Lemma 2.7 — divisor move",
+      "lines": "246–248",
+      "status": "PROVED",
+      "claim": "For any proper divisor 1 <= q < k, a path in I_k(G) connects a lift of f to a lift of f + q chi_C.",
+      "declarations": "Flow.Paper.lem_2_7",
+      "anchor": "lem:divmove",
+      "source_words": "there is a path in I_k(G) from an integer lift of f to an integer lift of f+q\\chi_C"
+    },
+    {
+      "place": "Corollary 2.8(a) — proper divisors are liftable",
+      "lines": "269–272",
+      "status": "PROVED",
+      "claim": "Every +-q for a proper divisor 1 <= q < k is liftable.",
+      "declarations": "Flow.Paper.cor_2_8_a",
+      "anchor": "cor:liftable",
+      "source_words": "Every element \\pm q for a proper divisor q of k is liftable"
+    },
+    {
+      "place": "Corollary 2.8(b) — liftable step systems lift connectivity",
+      "lines": "273–274",
+      "status": "PROVED",
+      "claim": "If a liftable step system connects M_k(G) on a loopless multigraph G, then I_k(G) is connected.",
+      "declarations": "Flow.Paper.cor_2_8_b",
+      "anchor": "cor:liftable",
+      "source_words": "then I_k(G) is connected"
+    },
+    {
+      "place": "Lemma 3.2 — extraction",
+      "lines": "299–301",
+      "status": "PROVED",
+      "claim": "Every loopless multigraph with n >= 3 vertices and more than (4/3)n - 2 edges contains a good subgraph.",
+      "declarations": "Flow.Paper.lem_3_2",
+      "anchor": "lem:extraction",
+      "source_words": "contains a good subgraph"
+    },
+    {
+      "place": "Lemma 3.4(a) — block 3-edge-connectivity",
+      "lines": "329–331",
+      "status": "PROVED",
+      "claim": "Every block of a loopless 3-edge-connected multigraph on >= 2 vertices is loopless, 3-edge-connected, has >= 2 vertices, and has no cut vertex.",
+      "declarations": "Flow.Paper.lem_3_4_a",
+      "anchor": "lem:reduction",
+      "source_words": "Every block K of H_0 is loopless and 3-edge-connected"
+    },
+    {
+      "place": "Lemma 3.4(b) — truncated cubic expansion",
+      "lines": "332–333",
+      "status": "PROVED",
+      "claim": "Every loopless 3-edge-connected cut-vertex-free multigraph on >= 2 vertices admits a truncated cubic 3-edge-connected cycle expansion.",
+      "declarations": "Flow.Paper.lem_3_4_b",
+      "anchor": "lem:reduction",
+      "source_words": "there is a truncated cubic 3-edge-connected graph Q_K"
+    },
+    {
+      "place": "Definition 3.5 — auxiliary graph existence",
+      "lines": "348–350",
+      "status": "PROVED",
+      "claim": "After reorienting H along thread directions, every (SUB) subdivision admits an auxiliary graph Q = disjoint union Q_b.",
+      "declarations": "Flow.Paper.aux_graph_exists",
+      "anchor": "def:threads",
+      "source_words": "fix a truncated cubic 3-edge-connected expansion Q_b"
+    },
+    {
+      "place": "Lemma 3.6(a) — thread constancy and bijection",
+      "lines": "356–359",
+      "status": "PROVED",
+      "claim": "Cycles and A-flows of H are constant on threads and A-flows of H biject explicitly with A-flows of H_0.",
+      "declarations": "Flow.Paper.lem_3_6_a",
+      "anchor": "lem:flows",
+      "source_words": "corresponds bijectively to an A-flow of H_0"
+    },
+    {
+      "place": "Lemma 3.6(b) — block flow restriction",
+      "lines": "360",
+      "status": "PROVED",
+      "claim": "Restriction of an A-flow of H_0 to any block K_b is an A-flow of K_b.",
+      "declarations": "Flow.Paper.lem_3_6_b",
+      "anchor": "lem:flows",
+      "source_words": "The restriction of an A-flow of H_0 to any block K_b is an A-flow of K_b"
+    },
+    {
+      "place": "Lemma 3.6(c) — projection pi surjectivity",
+      "lines": "361",
+      "status": "PROVED",
+      "claim": "pi maps A-flows of Q onto A-flows of H.",
+      "declarations": "Flow.Paper.lem_3_6_c",
+      "anchor": "lem:flows",
+      "source_words": "every A-flow of H equals \\pi(Y) for some A-flow Y of Q"
+    },
+    {
+      "place": "Lemma 3.6(d) — projected cycle decomposition",
+      "lines": "362",
+      "status": "PROVED",
+      "claim": "For every directed cycle C of Q, pi(x chi_C) is x times a sum of pairwise edge-disjoint directed cycles of H.",
+      "declarations": "Flow.Paper.lem_3_6_d",
+      "anchor": "lem:flows",
+      "source_words": "\\pi(x\\chi_C)=x(\\chi_{O_1}+\\dots+\\chi_{O_\\nu})"
+    },
+    {
+      "place": "Theorem 3.8 — JLPT well colouring",
+      "lines": "384–386",
+      "status": "PROVED",
+      "claim": "Every truncated cubic 3-edge-connected graph admits a well colouring.",
+      "declarations": "Flow.Paper.thm_3_8",
+      "anchor": "thm:jlpt",
+      "source_words": "Every truncated cubic 3-edge-connected graph admits a well colouring"
+    },
+    {
+      "place": "Lemma 3.9(a) — well-colouring counts and red forest",
+      "lines": "392–395",
+      "status": "PROVED",
+      "claim": "Q_b is simple and connected with 3(n-1)/2 edges, red edges form a forest, and no blue edge stays in one red component.",
+      "declarations": "Flow.Paper.lem_3_9",
+      "anchor": "lem:counts-stages",
+      "source_words": "Q_b is simple and connected with 3(n-1)/2 edges"
+    },
+    {
+      "place": "Lemma 3.9(b)–(d) — stages and stage graphs",
+      "lines": "396–399",
+      "status": "PROVED",
+      "claim": "Stages are disjoint or nested, induced in Q/red, Q_U is connected with exact edge and operand decompositions.",
+      "declarations": "Flow.Paper.lem_3_9_bcd",
+      "anchor": "lem:counts-stages",
+      "source_words": "Any two stages of Q_b/\\red are disjoint or nested"
+    },
+    {
+      "place": "Section 3 — frame existence",
+      "lines": "408",
+      "status": "PROVED",
+      "claim": "Given JLPT well colouring, every auxiliary graph Q admits a topologically ordered frame.",
+      "declarations": "Flow.Paper.frame_exists",
+      "anchor": "sec:frames",
+      "source_words": "numbered 1,\\dots,s in topological order"
+    },
+    {
+      "place": "Lemma 3.11 — official cycles (O1)–(O6)",
+      "lines": "416–425",
+      "status": "PROVED",
+      "claim": "Properties (O1)–(O6) for T^g, official cycles C_i, H_P, and free-edge cycles D_eps.",
+      "declarations": "Flow.Paper.lem_3_11",
+      "anchor": "lem:official",
+      "source_words": "Official cycles and free-edge cycles"
+    },
+    {
+      "place": "Section 3 — Definition 3.12 properties",
+      "lines": "451",
+      "status": "PROVED",
+      "claim": "For an H-good flow f, |Lambda_f(t)| <= 3, 0 in P(Lambda_f), and Y in P(Lambda_f) iff u + pi(Y) is non-zero on protected threads.",
+      "declarations": "Flow.Paper.def_3_12_properties",
+      "anchor": "def:lists",
+      "source_words": "0\\in\\PL{\\Lam_f}, and Y\\in\\PL{\\Lam_f} holds if and only if"
+    },
+    {
+      "place": "Section 4 — elementary facts (E1)–(E5)",
+      "lines": "460–466",
+      "status": "PROVED",
+      "claim": "Five elementary flow facts (E1)–(E5) on quotients, cycle sums, lifts, and contractions.",
+      "declarations": "Flow.Paper.sec4_E1 Flow.Paper.sec4_E2 Flow.Paper.sec4_E3 Flow.Paper.sec4_E4 Flow.Paper.sec4_E5",
+      "anchor": "sec:master",
+      "source_words": "We use five elementary facts about \\Gam-flows"
+    },
+    {
+      "place": "Lemma 4.1 — sparse zeros yield good subgraph",
+      "lines": "468–470",
+      "status": "PROVED",
+      "claim": "Under (AV), on a loopless 3-edge-connected multigraph with n >= 2, every flow is Sigma-joined to one whose A-support contains a good subgraph.",
+      "declarations": "Flow.Paper.lem_4_1",
+      "anchor": "lem:AVgood",
+      "source_words": "contains a good subgraph"
+    },
+    {
+      "place": "Lemma 4.2(a) — reverse choice",
+      "lines": "480–483",
+      "status": "PROVED",
+      "claim": "If |Lambda(e_i)| + |Lambda(f_i)| < |A| at every node, some official-cycle combination lands in P(Lambda).",
+      "declarations": "Flow.Paper.lem_4_2_a",
+      "anchor": "lem:reverse",
+      "source_words": "there exist x_1,\\dots,x_s\\in A with Y_0+\\sum_{i=1}^s x_i\\chi_{C_i}\\in\\PL{\\Lam}"
+    },
+    {
+      "place": "Lemma 4.2(b) — reverse choice with red edges",
+      "lines": "484–489",
+      "status": "PROVED",
+      "claim": "Every red edge lies on an official cycle, and reverse choice avoids Phi on E' under the degree bound.",
+      "declarations": "Flow.Paper.lem_4_2_b",
+      "anchor": "lem:reverse",
+      "source_words": "Every red edge \\eps lies on at least one official cycle"
+    },
+    {
+      "place": "Lemma 4.3 — walk lemma",
+      "lines": "498–500",
+      "status": "PROVED",
+      "claim": "Under |A| >= 10 and (R1), any two flows in P(Lambda) are connected by official-cycle Sigma_A steps inside P(Lambda).",
+      "declarations": "Flow.Paper.lem_4_3",
+      "anchor": "lem:walk",
+      "source_words": "joined by a sequence Y=Y_0,Y_1,\\dots,Y_n=Y' in \\PL{\\Lam}"
+    },
+    {
+      "place": "Lemma 4.4 — preparation in B",
+      "lines": "533–535",
+      "status": "PROVED",
+      "claim": "Under |B| >= 4 and (R2), B-moves inside H avoid T_eps on free threads in E^circ while preserving u and outside edges.",
+      "declarations": "Flow.Paper.lem_4_4",
+      "anchor": "lem:prepB",
+      "source_words": "to an H-good flow f^\\circ with A-coordinate u"
+    },
+    {
+      "place": "Lemma 4.5 — one step inside H",
+      "lines": "543–545",
+      "status": "PROVED",
+      "claim": "Under |B| >= 4 and (R2), a valid official-cycle step sigma chi_C in A lifts to Sigma-moves inside H.",
+      "declarations": "Flow.Paper.lem_4_5",
+      "anchor": "lem:stepH",
+      "source_words": "to an H-good flow with A-coordinate u' that equals f outside E(H)"
+    },
+    {
+      "place": "Lemma 4.6 — changing A-coordinate inside H",
+      "lines": "555–557",
+      "status": "PROVED",
+      "claim": "Under |A| >= 10, |B| >= 4, (R1), (R2), any Y in P(Lambda_f) is realized by Sigma-moves inside H.",
+      "declarations": "Flow.Paper.lem_4_6",
+      "anchor": "lem:L1",
+      "source_words": "to an H-good flow with A-coordinate u+\\pi(Y)"
+    },
+    {
+      "place": "Lemma 4.7 — the path",
+      "lines": "565–567",
+      "status": "PROVED",
+      "claim": "Any distinct p, p' in V(H) are joined by a path J in H using at most 3 edges on the threads of each pair N_i.",
+      "declarations": "Flow.Paper.lem_4_7",
+      "anchor": "lem:P",
+      "source_words": "using at most 3 edges in total on the threads of each pair N_i"
+    },
+    {
+      "place": "Lemma 4.8 — lifting a contracted move (CYC)",
+      "lines": "581–583",
+      "status": "PROVED",
+      "claim": "A contracted Sigma-move on G/H lifts to Sigma-moves on G preserving H-goodness in case (CYC).",
+      "declarations": "Flow.Paper.lem_4_8_cyc",
+      "anchor": "lem:L2",
+      "source_words": "Lifting a contracted move"
+    },
+    {
+      "place": "Lemma 4.8 — lifting a contracted move (SUB)",
+      "lines": "581–583",
+      "status": "PROVED",
+      "claim": "A contracted Sigma-move on G/H lifts to Sigma-moves on G preserving H-goodness relative to a fixed frame in case (SUB).",
+      "declarations": "Flow.Paper.lem_4_8_sub",
+      "anchor": "lem:L2",
+      "source_words": "Lifting a contracted move"
+    },
+    {
+      "place": "Section 4 — integer consequence",
+      "lines": "635",
+      "status": "PROVED",
+      "claim": "Combining Theorem 1.3 and Corollary 2.8(b) yields connectivity of M_{ab}(G) and I_{ab}(G).",
+      "declarations": "Flow.Paper.sec4_integer_consequence",
+      "anchor": "sec:master",
+      "source_words": "Combining Theorem 1.3 with Corollary 2.8(b) immediately yields the integer form"
+    },
+    {
+      "place": "Lemma 5.1 — averaging in a product",
+      "lines": "642–648",
+      "status": "PROVED",
+      "claim": "Product averaging gives a Sigma-joined flow with at most m/9 zeros in its A-coordinate and establishes (AV).",
+      "declarations": "Flow.Paper.lem_5_1",
+      "anchor": "lem:AVG",
+      "source_words": "whose A-coordinate has at most m/9 zeros. In particular, (AV) holds"
+    },
+    {
+      "place": "Remark 5.2 — index bound",
+      "lines": "687–689",
+      "status": "PROVED",
+      "claim": "For a >= 9 and b >= 1, 9 * (b - 1) < a * b - 1.",
+      "declarations": "Flow.Paper.rem_5_2_index_bound",
+      "anchor": "rem:internal",
+      "source_words": "(b-1)/(ab-1)<1/a\\le 1/9"
+    },
+    {
+      "place": "Remark 5.2 — internal direct sums",
+      "lines": "687–689",
+      "status": "PROVED",
+      "claim": "Internal direct sum with generating sets in Sigma and |A| >= 9 implies (AV).",
+      "declarations": "Flow.Paper.rem_5_2_internal_direct_sum",
+      "anchor": "rem:internal",
+      "source_words": "applies whenever \\Gam has two non-trivial subgroups \\Gam_1,\\Gam_2"
+    },
+    {
+      "place": "Section 5 — orders 40 to 50",
+      "lines": "694",
+      "status": "PROVED",
+      "claim": "Among 40 <= n <= 50, a divisor 4 <= d <= n/10 exists iff n in {40, 44, 48, 50}, none of which is a prime power.",
+      "declarations": "Flow.Paper.sec5_orders_40_to_50",
+      "anchor": "sec:averaging",
+      "source_words": "For 40\\le n\\le 50, a divisor d with 4\\le d\\le n/10 exists precisely for n\\in\\{40,44,48,50\\}"
+    },
+    {
+      "place": "Lemma 6.1 — at most two non-steps in Z_a",
+      "lines": "703–705",
+      "status": "PROVED",
+      "claim": "For a >= 10 and symmetric D of size >= a - 3, deleting <= 6 elements leaves Z_a connected by D-steps.",
+      "declarations": "Flow.Paper.lem_6_1",
+      "anchor": "lem:twononsteps",
+      "source_words": "joined by a walk in \\Z_a\\setminus X with steps in D"
+    },
+    {
+      "place": "Lemma 6.2 — Z_b minus two elements",
+      "lines": "711–713",
+      "status": "PROVED",
+      "claim": "For b >= 4 and proper divisor 1 < d < b, deleting <= 2 elements leaves Z_b connected by {+-1, +-d}.",
+      "declarations": "Flow.Paper.lem_6_2",
+      "anchor": "lem:Zb",
+      "source_words": "with steps in \\{\\pm 1,\\pm d\\}"
+    },
+    {
+      "place": "Table 2 — base proper divisors of 40, 48, 66",
+      "lines": "735–740",
+      "status": "PROVED",
+      "claim": "Base proper divisors of 40, 48, 66 cover all non-zero residues mod 10, 12, 11 except +-3, +-5, +-4.",
+      "declarations": "Flow.Paper.sec6_table2_moduli",
+      "anchor": "tab:moduli",
+      "source_words": "Missing mod a"
+    },
+    {
+      "place": "Remark 6.3 — sharpness at 40, k = 44, prime powers",
+      "lines": "755–757",
+      "status": "PROVED",
+      "claim": "44 = 11 * 4 uniquely, proper divisors of 44 project to {+-1, +-2, +-4} mod 11 failing (R1), and Z_{p^r} has no non-trivial product split.",
+      "declarations": "Flow.Paper.rem_6_3_sharpness",
+      "anchor": "rem:sharpness",
+      "source_words": "Why 40 is the exact threshold of this method"
+    },
+    {
+      "place": "Non-vacuity — loop cycle",
+      "lines": "Lean-only",
+      "status": "PROVED",
+      "claim": "A single loop on Unit is a cycle and bridgeless.",
+      "declarations": "Flow.Paper.nonvacuous_loop_cycle",
+      "anchor": "Lean-only",
+      "source_words": "Non-vacuity witness"
+    },
+    {
+      "place": "Non-vacuity — truncated cubic and well colouring",
+      "lines": "Lean-only",
+      "status": "PROVED",
+      "claim": "K_4 - v is truncated cubic 3-edge-connected and admits a well colouring.",
+      "declarations": "Flow.Paper.nonvacuous_tc3ec_and_well_colouring",
+      "anchor": "Lean-only",
+      "source_words": "Non-vacuity witness"
+    },
+    {
+      "place": "Non-vacuity — subdivision, aux graph, frame",
+      "lines": "Lean-only",
+      "status": "PROVED",
+      "claim": "The 2-vertex 3-parallel-edge multigraph admits SubdivisionData, AuxGraphData, and Frame.",
+      "declarations": "Flow.Paper.nonvacuous_subdivision_aux_frame",
+      "anchor": "Lean-only",
+      "source_words": "Non-vacuity witness"
+    }
+  ],
+  "axioms": {
+    "Flow.Paper.aux_graph_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.cor_2_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.cor_2_8_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.cor_2_8_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.def_3_12_properties": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.fig1_density_one": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.frame_exists": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_1_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_1_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_2_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_11": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_4_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_4_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_6_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_6_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_6_c": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_6_d": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_9": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_3_9_bcd": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_2_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_2_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_6": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_7": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_8_cyc": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_4_8_sub": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_5_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_6_1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.lem_6_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.nonvacuous_loop_cycle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.nonvacuous_subdivision_aux_frame": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.nonvacuous_tc3ec_and_well_colouring": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.rem_5_2_index_bound": [
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.rem_5_2_internal_direct_sum": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.rem_6_3_sharpness": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec1_Z3_three_parallel_disconnected": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec1_trivial_int_k2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec1_trivial_small_group": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec2_cycle_smul_isFlow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec2_move_iff_supp_cycle": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec2_reorient_preserves_flow": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec2_reorient_preserves_flowMove": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_E1": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_E2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_E3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_E4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_E5": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec4_integer_consequence": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec5_orders_40_to_50": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.sec6_table2_moduli": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_1_a": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_1_b": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_1_k40": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_2": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_2_orders_40_44_48_50": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_3": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_1_4": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
+    "Flow.Paper.thm_3_8": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ]
+  },
+  "inputs": {
+    "Flow.Paper.aux_graph_exists": [],
+    "Flow.Paper.cor_2_3": [],
+    "Flow.Paper.cor_2_8_a": [],
+    "Flow.Paper.cor_2_8_b": [],
+    "Flow.Paper.def_3_12_properties": [],
+    "Flow.Paper.fig1_density_one": [],
+    "Flow.Paper.frame_exists": [],
+    "Flow.Paper.lem_2_1_a": [],
+    "Flow.Paper.lem_2_1_b": [],
+    "Flow.Paper.lem_2_2": [],
+    "Flow.Paper.lem_2_4": [],
+    "Flow.Paper.lem_2_6": [],
+    "Flow.Paper.lem_2_7": [],
+    "Flow.Paper.lem_3_11": [],
+    "Flow.Paper.lem_3_2": [],
+    "Flow.Paper.lem_3_4_a": [],
+    "Flow.Paper.lem_3_4_b": [],
+    "Flow.Paper.lem_3_6_a": [],
+    "Flow.Paper.lem_3_6_b": [],
+    "Flow.Paper.lem_3_6_c": [],
+    "Flow.Paper.lem_3_6_d": [],
+    "Flow.Paper.lem_3_9": [],
+    "Flow.Paper.lem_3_9_bcd": [],
+    "Flow.Paper.lem_4_1": [],
+    "Flow.Paper.lem_4_2_a": [],
+    "Flow.Paper.lem_4_2_b": [],
+    "Flow.Paper.lem_4_3": [],
+    "Flow.Paper.lem_4_4": [],
+    "Flow.Paper.lem_4_5": [],
+    "Flow.Paper.lem_4_6": [],
+    "Flow.Paper.lem_4_7": [],
+    "Flow.Paper.lem_4_8_cyc": [],
+    "Flow.Paper.lem_4_8_sub": [],
+    "Flow.Paper.lem_5_1": [],
+    "Flow.Paper.lem_6_1": [],
+    "Flow.Paper.lem_6_2": [],
+    "Flow.Paper.nonvacuous_loop_cycle": [],
+    "Flow.Paper.nonvacuous_subdivision_aux_frame": [],
+    "Flow.Paper.nonvacuous_tc3ec_and_well_colouring": [],
+    "Flow.Paper.rem_5_2_index_bound": [],
+    "Flow.Paper.rem_5_2_internal_direct_sum": [],
+    "Flow.Paper.rem_6_3_sharpness": [],
+    "Flow.Paper.sec1_Z3_three_parallel_disconnected": [],
+    "Flow.Paper.sec1_trivial_int_k2": [],
+    "Flow.Paper.sec1_trivial_small_group": [],
+    "Flow.Paper.sec2_cycle_smul_isFlow": [],
+    "Flow.Paper.sec2_move_iff_supp_cycle": [],
+    "Flow.Paper.sec2_reorient_preserves_flow": [],
+    "Flow.Paper.sec2_reorient_preserves_flowMove": [],
+    "Flow.Paper.sec4_E1": [],
+    "Flow.Paper.sec4_E2": [],
+    "Flow.Paper.sec4_E3": [],
+    "Flow.Paper.sec4_E4": [],
+    "Flow.Paper.sec4_E5": [],
+    "Flow.Paper.sec4_integer_consequence": [],
+    "Flow.Paper.sec5_orders_40_to_50": [],
+    "Flow.Paper.sec6_table2_moduli": [],
+    "Flow.Paper.thm_1_1_a": [],
+    "Flow.Paper.thm_1_1_b": [],
+    "Flow.Paper.thm_1_1_k40": [],
+    "Flow.Paper.thm_1_2": [],
+    "Flow.Paper.thm_1_2_orders_40_44_48_50": [],
+    "Flow.Paper.thm_1_3": [],
+    "Flow.Paper.thm_1_4": [],
+    "Flow.Paper.thm_3_8": []
+  }
+}
