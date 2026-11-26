@@ -584,6 +584,22 @@ theorem sec4_E5
     (G.contractBy q).IsFlow (fun e => f e.1) :=
   sorry
 
+/-- **(E5) (subset deletion form, matching the printed sentence):**
+Identifying vertex classes of `G` via `q : V → W` and deleting any set `S` of edges
+with both ends in one class (retaining every edge outside `S`, including retained
+intra-class edges as loops) sends every `Γ`-flow of `G`, by restriction, to a `Γ`-flow
+of the contracted multigraph. -/
+theorem sec4_E5_subset
+    {V E W Γ : Type} [Fintype E] [DecidableEq V] [DecidableEq W] [DecidableEq E] [AddCommGroup Γ]
+    (G : Multigraph V E) (q : V → W) (S : Finset E)
+    (hS : ∀ e ∈ S, q (G.tail e) = q (G.head e))
+    (f : E → Γ) (hf : G.IsFlow f) :
+    Multigraph.IsFlow
+      ({ tail := fun e => q (G.tail e.1), head := fun e => q (G.head e.1) } :
+        Multigraph W {e : E // e ∉ S})
+      (fun e => f e.1) :=
+  sorry
+
 /-- **Lemma 4.1 (Sparse zeros yield a good subgraph).** -/
 theorem lem_4_1
     {Γ : Type} [AddCommGroup Γ] [Fintype Γ] [DecidableEq Γ]

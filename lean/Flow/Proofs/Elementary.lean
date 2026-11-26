@@ -223,6 +223,72 @@ theorem sec4_E5_proved
     rw [heq, sub_self]
   rw [hcancel, add_zero]
 
+theorem sec4_E5_subset_proved
+    {V E W Γ : Type} [Fintype E] [DecidableEq V] [DecidableEq W] [DecidableEq E] [AddCommGroup Γ]
+    (G : Multigraph V E) (q : V → W) (S : Finset E)
+    (hS : ∀ e ∈ S, q (G.tail e) = q (G.head e))
+    (f : E → Γ) (hf : G.IsFlow f) :
+    Multigraph.IsFlow
+      ({ tail := fun e => q (G.tail e.1), head := fun e => q (G.head e.1) } :
+        Multigraph W {e : E // e ∉ S})
+      (fun e => f e.1) := by
+  intro w
+  let U : Finset V := Finset.univ.image G.head ∪ Finset.univ.image G.tail
+  have hzero : ∑ u ∈ U.filter (fun u : V => q u = w), G.boundary f u = 0 :=
+    Finset.sum_eq_zero fun u _ => hf u
+  rw [← hzero]
+  unfold Multigraph.boundary
+  simp only [Finset.sum_filter]
+  rw [← Finset.sum_sub_distrib]
+  have hrhs :
+      ∑ u ∈ U, (if q u = w then
+        (∑ e : E, if G.head e = u then f e else 0) -
+        (∑ e : E, if G.tail e = u then f e else 0)
+      else 0) =
+      ∑ e : E, ((if q (G.head e) = w then f e else 0) -
+                (if q (G.tail e) = w then f e else 0)) := by
+    have hsplit : ∀ (g : E → V), (∀ e : E, g e ∈ U) →
+        ∑ u ∈ U, (if q u = w then ∑ e : E, if g e = u then f e else 0 else 0) =
+        ∑ e : E, if q (g e) = w then f e else 0 := by
+      intro g hgU
+      calc
+        ∑ u ∈ U, (if q u = w then ∑ e : E, if g e = u then f e else 0 else 0)
+            = ∑ u ∈ U, ∑ e : E, if q u = w ∧ g e = u then f e else 0 := by
+              refine Finset.sum_congr rfl fun u _ => ?_
+              by_cases hqu : q u = w <;> simp [hqu]
+        _ = ∑ e : E, ∑ u ∈ U, if q u = w ∧ g e = u then f e else 0 := Finset.sum_comm
+        _ = ∑ e : E, if q (g e) = w then f e else 0 := by
+              refine Finset.sum_congr rfl fun e _ => ?_
+              rw [Finset.sum_eq_single (g e)]
+              · simp
+              · intro u _ hne
+                simp [Ne.symm hne]
+              · intro hmem; exact absurd (hgU e) hmem
+    have hsub :
+        ∑ u ∈ U, (if q u = w then
+          (∑ e : E, if G.head e = u then f e else 0) -
+          (∑ e : E, if G.tail e = u then f e else 0)
+        else 0) =
+        (∑ u ∈ U, if q u = w then ∑ e : E, if G.head e = u then f e else 0 else 0) -
+        (∑ u ∈ U, if q u = w then ∑ e : E, if G.tail e = u then f e else 0 else 0) := by
+      rw [← Finset.sum_sub_distrib]
+      refine Finset.sum_congr rfl fun u _ => ?_
+      by_cases hqu : q u = w <;> simp [hqu]
+    rw [hsub,
+        hsplit G.head (fun e => Finset.mem_union_left _ (Finset.mem_image_of_mem _ (Finset.mem_univ e))),
+        hsplit G.tail (fun e => Finset.mem_union_right _ (Finset.mem_image_of_mem _ (Finset.mem_univ e))),
+        ← Finset.sum_sub_distrib]
+  rw [hrhs]
+  rw [← Fintype.sum_subtype_add_sum_subtype (p := fun e : E => e ∉ S)]
+  have hcancel :
+      ∑ e : {e : E // ¬ e ∉ S},
+        ((if q (G.head e.1) = w then f e.1 else 0) -
+         (if q (G.tail e.1) = w then f e.1 else 0)) = 0 := by
+    refine Finset.sum_eq_zero fun e _ => ?_
+    have heq : q (G.tail e.1) = q (G.head e.1) := hS e.1 (not_not.mp e.2)
+    rw [heq, sub_self]
+  rw [hcancel, add_zero]
+
 /-! ### Non-vacuity witnesses -/
 
 theorem nonvacuous_loop_cycle_proved :

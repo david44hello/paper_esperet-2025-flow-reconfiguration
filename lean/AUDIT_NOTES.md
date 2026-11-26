@@ -4,7 +4,7 @@ This document records the scope, proof architecture, and verification status of 
 
 ## Axioms and background theorems (zero custom axioms, zero external hypotheses)
 
-Every one of the 65 checked declarations in `Flow/Paper/Statements.lean` (covering all 61 rows of `CLAIM_MAP.tsv`) is proved unconditionally from Lean's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Neither custom `axiom`s nor unproved literature hypotheses remain:
+Every one of the 66 checked declarations in `Flow/Paper/Statements.lean` (covering all 61 rows of `CLAIM_MAP.tsv`) is proved unconditionally from Lean's three standard axioms (`propext`, `Classical.choice`, `Quot.sound`). Neither custom `axiom`s nor unproved literature hypotheses remain:
 
 1. **`Flow.JLPTWellColouring`** (Theorem 3.8, `Flow.Paper.thm_3_8`):
    - Proved unconditionally in `Flow/Proofs/JLPTWellColouring.lean` following Jaeger, Linial, Payan, and Tarsi (1992), Lemma 3.3 via Lemma 3.2 (induction via sticking at non-trivial 3-edge-cuts and growing on internally 4-edge-connected cubic graphs).

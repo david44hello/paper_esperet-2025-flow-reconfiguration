@@ -344,10 +344,10 @@
     },
     {
       "place": "Section 4 — elementary facts (E1)–(E5)",
-      "lines": "460–466",
+      "lines": "459–466",
       "status": "PROVED",
-      "claim": "Five elementary flow facts (E1)–(E5) on quotients, cycle sums, lifts, and contractions.",
-      "declarations": "Flow.Paper.sec4_E1 Flow.Paper.sec4_E2 Flow.Paper.sec4_E3 Flow.Paper.sec4_E4 Flow.Paper.sec4_E5",
+      "claim": "Five elementary flow facts (E1)–(E5) on quotients, cycle sums, lifts, and contractions (including arbitrary subset deletion of intra-class edges).",
+      "declarations": "Flow.Paper.sec4_E1 Flow.Paper.sec4_E2 Flow.Paper.sec4_E3 Flow.Paper.sec4_E4 Flow.Paper.sec4_E5 Flow.Paper.sec4_E5_subset",
       "anchor": "sec:master",
       "source_words": "We use five elementary facts about \\Gam-flows"
     },
@@ -820,6 +820,11 @@
       "Quot.sound",
       "propext"
     ],
+    "Flow.Paper.sec4_E5_subset": [
+      "Classical.choice",
+      "Quot.sound",
+      "propext"
+    ],
     "Flow.Paper.sec4_integer_consequence": [
       "Classical.choice",
       "Quot.sound",
@@ -931,6 +936,7 @@
     "Flow.Paper.sec4_E3": [],
     "Flow.Paper.sec4_E4": [],
     "Flow.Paper.sec4_E5": [],
+    "Flow.Paper.sec4_E5_subset": [],
     "Flow.Paper.sec4_integer_consequence": [],
     "Flow.Paper.sec5_orders_40_to_50": [],
     "Flow.Paper.sec6_table2_moduli": [],

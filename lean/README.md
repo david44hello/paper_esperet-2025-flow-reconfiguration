@@ -17,7 +17,7 @@ Install [elan](https://github.com/leanprover/elan) (the toolchain is pinned in `
 A successful run ends with:
 
 ```text
-Checked 65 Lean declarations against the three permitted standard axioms.
+Checked 66 Lean declarations against the three permitted standard axioms.
 ```
 
 Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see [LICENSE](../LICENSE).
