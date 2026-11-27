@@ -1,9 +1,13 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Extraction
-import Flow.Proofs.Blocks
-import Flow.Proofs.FlowsQ
-import Flow.Proofs.Liftable
+public import Flow.Defs.Literature
+public import Flow.Proofs.Extraction
+public import Flow.Proofs.Blocks
+public import Flow.Proofs.FlowsQ
+public import Flow.Proofs.Liftable
+
+@[expose] public section
 
 /-!
 # Well colourings, 2-constructions, frames, official cycles, and list assignments

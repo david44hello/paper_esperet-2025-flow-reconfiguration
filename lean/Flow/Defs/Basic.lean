@@ -1,8 +1,13 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Mathlib.Algebra.BigOperators.Group.Finset.Basic
-import Mathlib.Data.Fintype.Card
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Logic.Relation
+public import Mathlib.Algebra.BigOperators.Group.Finset.Basic
+public import Mathlib.Data.Fintype.Card
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Logic.Relation
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Core definitions for finite multigraphs, flows, and reconfiguration graphs

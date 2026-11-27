@@ -1,9 +1,13 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Flow.Proofs.Basic
-import Flow.Proofs.SmallClaims
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Flow.Proofs.Basic
+public import Flow.Proofs.SmallClaims
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Section 4 proofs (Part 2): Lifting contracted cycles (`liftContractedCycle`) and `lem_4_8_cyc`

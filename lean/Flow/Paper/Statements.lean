@@ -1,24 +1,29 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Flow.Proofs.Basic
-import Flow.Proofs.Liftable
-import Flow.Proofs.Extraction
-import Flow.Proofs.Blocks
-import Flow.Proofs.FlowsQ
-import Flow.Proofs.Frames
-import Flow.Proofs.SmallClaims
-import Flow.Proofs.Witnesses
-import Flow.Proofs.Coverage
-import Flow.Proofs.Moduli
-import Flow.Proofs.Averaging
-import Flow.Proofs.MainInt
-import Flow.Proofs.MasterHelpers
-import Flow.Proofs.LiftMove
-import Flow.Proofs.PathAndSub
-import Flow.Proofs.Master
-import Flow.Proofs.JLPTWellColouring
-import Flow.Proofs.SeymourFromJLPT
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Flow.Proofs.Basic
+public import Flow.Proofs.Liftable
+public import Flow.Proofs.Extraction
+public import Flow.Proofs.Blocks
+public import Flow.Proofs.FlowsQ
+public import Flow.Proofs.Frames
+public import Flow.Proofs.SmallClaims
+public import Flow.Proofs.Witnesses
+public import Flow.Proofs.Coverage
+public import Flow.Proofs.Moduli
+public import Flow.Proofs.Averaging
+public import Flow.Proofs.MainInt
+public import Flow.Proofs.MasterHelpers
+public import Flow.Proofs.LiftMove
+public import Flow.Proofs.PathAndSub
+public import Flow.Proofs.Master
+public import Flow.Proofs.JLPTWellColouring
+public import Flow.Proofs.SeymourFromJLPT
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Paper statements — single source of truth for all claims in the paper

@@ -1,6 +1,10 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Frames
-import Flow.Proofs.Blocks
+public import Flow.Defs.Frames
+public import Flow.Proofs.Blocks
+
+@[expose] public section
 
 /-!
 # Section 3 (Part 3): Flows on `H`, `H₀`, and `Q` (Lemma 3.6(a)–(d))

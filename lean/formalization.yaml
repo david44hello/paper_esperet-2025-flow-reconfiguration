@@ -1,0 +1,76 @@
+version: v0.4
+project:
+  name: "The Esperet–Hendrey–Lagoutte–Marseloo–Norin–Steiner (2025) flow reconfiguration problem: a positive answer (k = 40)"
+  description: "Unconditional Lean 4 formalization of Theorems 1.1–1.3 (and all supporting lemmas and remarks) of \"The Esperet–Hendrey–Lagoutte–Marseloo–Norin–Steiner (2025) flow reconfiguration problem: a positive answer (k = 40)\": the integer flow reconfiguration graph I_k(G) (loopless) and modular graph M_k(G) (loops allowed) are connected for every finite bridgeless multigraph G whenever k is a positive multiple of 40, 48, or 66 (in particular k = 40, resolving Problem 1.2 of Esperet et al. 2025), and F(G, Γ) is connected for every non-cyclic-prime-power finite abelian group Γ whose order has a divisor 4 <= d <= |Γ|/10 (lowering the smallest known universal group order from 256 to 40). Both quoted background results (Seymour–Tutte 6-flow Theorem 1.4 and Jaeger–Linial–Payan–Tarsi well-colouring Theorem 3.8) are proved from scratch from Lean's three standard axioms alone."
+  authors:
+  - Dave Goel
+  license: Apache-2.0
+  responsible_maintainers:
+  - Dave Goel
+classification:
+  arxiv:
+  - math.CO
+  msc2020:
+  - 05C21
+  - 05C25
+  - 05C40
+sources:
+- title: "The Esperet–Hendrey–Lagoutte–Marseloo–Norin–Steiner (2025) flow reconfiguration problem: a positive answer (k = 40)"
+  authors:
+  - Dave Goel
+  id: 10.5281/zenodo.24572033
+  type: paper
+  location: https://doi.org/10.5281/zenodo.24572033
+  relationship: formalizes
+status:
+  scope: The six compared declarations are Theorems 1.1(a), 1.1(b), 1.1 (k = 40), 1.2, 1.2 (orders 40, 44, 48, 50), and 1.3. All six—and all 66 declarations of the full release, including both quoted background theorems (Seymour–Tutte 6-flow Theorem 1.4 and Jaeger–Linial–Payan–Tarsi well-colouring Theorem 3.8)—are proved from Lean's three standard axioms alone, with zero custom axioms and zero external hypotheses.
+  sorry_count: 0
+  sorry_in_definitions: 0
+  axioms:
+  - propext
+  - Quot.sound
+  - Classical.choice
+automation:
+  methods:
+  - method: agent
+    tool_setup: AI agents prepared and checked the Lean proof under the author’s direction.
+fidelity:
+  divergences: All six compared statements match Theorems 1.1, 1.2, and 1.3 of the paper verbatim on finite oriented multigraphs (loops and parallel edges permitted). Theorem 1.1(b) assumes looplessness as in the paper; Theorems 1.1(a), 1.2, and 1.3 allow loops.
+review:
+  status: agent-reviewed
+  reviewers:
+  - Google Gemini
+  notes: An independent Google Gemini check matched all six statements to the paper and verified the Lean proofs. All 66 declarations covering Theorems 1.1–1.3, every supporting lemma and remark, and both quoted literature theorems (Seymour–Tutte 6-flow and Jaeger–Linial–Payan–Tarsi well colouring) passed a clean build from empty, whole-library kernel replay, and both standard and paranoid lake comparator checks of the full and six-theorem configurations.
+alignment:
+  namespace: Flow.Paper
+  statements:
+  - source: Theorem 1.1(a)
+    lean: Flow.Paper.thm_1_1_a
+    module: RegistryChallenge
+    status: proved
+    note: The modular flow reconfiguration graph M_k(G) is connected for every finite bridgeless multigraph G whenever 40, 48, or 66 divides k > 0.
+  - source: Theorem 1.1(b)
+    lean: Flow.Paper.thm_1_1_b
+    module: RegistryChallenge
+    status: proved
+    note: The integer flow reconfiguration graph I_k(G) is connected for every finite bridgeless loopless multigraph G whenever 40, 48, or 66 divides k > 0.
+  - source: Theorem 1.1 (k = 40)
+    lean: Flow.Paper.thm_1_1_k40
+    module: RegistryChallenge
+    status: proved
+    note: Resolves Problem 1.2 of Esperet et al. (2025) with uniform k = 40.
+  - source: Theorem 1.2
+    lean: Flow.Paper.thm_1_2
+    module: RegistryChallenge
+    status: proved
+    note: The abelian-group flow reconfiguration graph F(G, Γ) is connected for every non-cyclic-prime-power finite abelian group Γ whose order has a divisor 4 <= d <= |Γ|/10.
+  - source: Theorem 1.2 (orders 40, 44, 48, 50)
+    lean: Flow.Paper.thm_1_2_orders_40_44_48_50
+    module: RegistryChallenge
+    status: proved
+    note: Specialization of Theorem 1.2 to all abelian groups of order 40, 44, 48, or 50.
+  - source: Theorem 1.3
+    lean: Flow.Paper.thm_1_3
+    module: RegistryChallenge
+    status: proved
+    note: Master theorem for step systems satisfying (R1), (R2), (R3), and (AV) with |Γ/B| >= 10 and |B| >= 4.

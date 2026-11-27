@@ -1,7 +1,11 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Mathlib.GroupTheory.QuotientGroup.Basic
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Mathlib.GroupTheory.QuotientGroup.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Elementary lemmas, Section 1 trivial cases, Section 2 conventions, Section 4 (E1)–(E5),

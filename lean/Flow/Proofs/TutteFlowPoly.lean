@@ -1,8 +1,12 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Basic
-import Flow.Proofs.Liftable
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Basic
+public import Flow.Proofs.Liftable
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Tutte's flow polynomial invariance (1954): `|NZFlow G A|` depends only on `|A|`

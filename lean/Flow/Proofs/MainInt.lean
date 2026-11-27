@@ -1,7 +1,11 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Proofs.Moduli
-import Flow.Proofs.Averaging
-import Mathlib.Data.Nat.Factorization.Basic
+public import Flow.Proofs.Moduli
+public import Flow.Proofs.Averaging
+public import Mathlib.Data.Nat.Factorization.Basic
+
+@[expose] public section
 
 /-!
 # Section 6: Proof of Theorem 1.1 (Integer and modular flows for positive multiples of 40, 48, 66)

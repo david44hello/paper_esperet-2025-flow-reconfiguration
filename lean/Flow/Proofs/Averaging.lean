@@ -1,11 +1,15 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Mathlib.GroupTheory.FiniteAbelian.Basic
-import Mathlib.GroupTheory.QuotientGroup.Finite
-import Mathlib.GroupTheory.PGroup
-import Mathlib.Analysis.SpecificLimits.Basic
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Mathlib.GroupTheory.FiniteAbelian.Basic
+public import Mathlib.GroupTheory.QuotientGroup.Finite
+public import Mathlib.GroupTheory.PGroup
+public import Mathlib.Analysis.SpecificLimits.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Section 5: Product averaging (Lemma 5.1), Remark 5.2, and Theorem 1.2

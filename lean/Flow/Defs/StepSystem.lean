@@ -1,7 +1,12 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Basic
-import Mathlib.GroupTheory.QuotientGroup.Defs
-import Mathlib.Data.Nat.Prime.Defs
+public import Flow.Defs.Basic
+public import Mathlib.GroupTheory.QuotientGroup.Defs
+public import Mathlib.Data.Nat.Prime.Defs
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Step systems, quotient conditions `(R1)`–`(R3)` and `(AV)`, and group predicates

@@ -1,9 +1,13 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Mathlib.GroupTheory.OrderOfElement
-import Mathlib.GroupTheory.PGroup
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Mathlib.GroupTheory.OrderOfElement
+public import Mathlib.GroupTheory.PGroup
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Section 6: Lemmas 6.1, 6.2, Remark 6.3, and Section 4 integer consequence

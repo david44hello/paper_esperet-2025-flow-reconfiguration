@@ -1,7 +1,11 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Basic
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Basic
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Small standalone claims: `sec1_trivial_int_k2` and `sec2_move_iff_supp_cycle`

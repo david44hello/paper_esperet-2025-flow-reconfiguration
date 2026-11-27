@@ -1,10 +1,14 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Proofs.Basic
-import Flow.Defs.StepSystem
-import Mathlib.Algebra.BigOperators.Field
-import Mathlib.Data.Real.Basic
-import Mathlib.Data.ZMod.Basic
-import Mathlib.Tactic.Ring
+public import Flow.Proofs.Basic
+public import Flow.Defs.StepSystem
+public import Mathlib.Algebra.BigOperators.Field
+public import Mathlib.Data.Real.Basic
+public import Mathlib.Data.ZMod.Basic
+public import Mathlib.Tactic.Ring
+
+@[expose] public section
 
 /-!
 # Section 2 proofs: rounding, integer lifts, connected fibres, and liftable divisor steps

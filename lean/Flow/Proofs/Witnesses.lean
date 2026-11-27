@@ -1,6 +1,10 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Concrete non-vacuity witnesses for truncated cubic graphs, well colourings, and frames

@@ -1,10 +1,14 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Flow.Proofs.Basic
-import Flow.Proofs.MasterHelpers
-import Flow.Proofs.LiftMove
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Flow.Proofs.Basic
+public import Flow.Proofs.MasterHelpers
+public import Flow.Proofs.LiftMove
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Section 4 proofs (Part 3): Lemma 4.7 (`lem_4_7_of`) and Lemma 4.8(SUB) (`lem_4_8_sub_of`)

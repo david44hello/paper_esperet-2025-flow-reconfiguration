@@ -1,6 +1,10 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Frames
-import Flow.Proofs.Basic
+public import Flow.Defs.Frames
+public import Flow.Proofs.Basic
+
+@[expose] public section
 
 /-!
 # Section 3 (Part 1): Forest/connectivity edge counts and Lemma 3.2 (Extraction)

@@ -1,10 +1,14 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Mathlib.Data.Nat.Totient
-import Mathlib.NumberTheory.SumPrimeReciprocals
-import Mathlib.Analysis.SpecialFunctions.ExpDeriv
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Mathlib.Data.Nat.Totient
+public import Mathlib.NumberTheory.SumPrimeReciprocals
+public import Mathlib.Analysis.SpecialFunctions.ExpDeriv
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Additional coverage proofs: Section 1 `ℤ_3` counterexample, Section 2 move invariance under

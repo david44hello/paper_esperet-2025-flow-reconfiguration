@@ -1,6 +1,11 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Mathlib.Algebra.Field.ZMod
+public import Flow.Defs.Literature
+public import Mathlib.Algebra.Field.ZMod
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Paper statements — single source of truth for all claims in the paper

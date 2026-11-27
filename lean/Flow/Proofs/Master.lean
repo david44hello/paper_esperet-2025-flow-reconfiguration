@@ -1,12 +1,16 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Flow.Proofs.Basic
-import Flow.Proofs.SmallClaims
-import Flow.Proofs.MasterHelpers
-import Flow.Proofs.LiftMove
-import Flow.Proofs.PathAndSub
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Flow.Proofs.Basic
+public import Flow.Proofs.SmallClaims
+public import Flow.Proofs.MasterHelpers
+public import Flow.Proofs.LiftMove
+public import Flow.Proofs.PathAndSub
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Section 4 proofs (Part 4): Master theorem (`thm_1_3_of`)

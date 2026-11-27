@@ -1,14 +1,18 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Elementary
-import Flow.Proofs.Basic
-import Flow.Proofs.Blocks
-import Flow.Proofs.FlowsQ
-import Flow.Proofs.TutteFlowPoly
-import Flow.Proofs.LiftMove
-import Flow.Proofs.Master
-import Mathlib.Data.ZMod.QuotientRing
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Elementary
+public import Flow.Proofs.Basic
+public import Flow.Proofs.Blocks
+public import Flow.Proofs.FlowsQ
+public import Flow.Proofs.TutteFlowPoly
+public import Flow.Proofs.LiftMove
+public import Flow.Proofs.Master
+public import Mathlib.Data.ZMod.QuotientRing
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Deriving `SeymourSixFlow` from `JLPTWellColouring`

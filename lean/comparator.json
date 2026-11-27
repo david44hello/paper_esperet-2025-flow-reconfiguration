@@ -1,0 +1,19 @@
+{
+  "challenge_module": "RegistryChallenge",
+  "solution_module": "RegistrySolution",
+  "theorem_names": [
+    "Flow.Paper.thm_1_1_a",
+    "Flow.Paper.thm_1_1_b",
+    "Flow.Paper.thm_1_1_k40",
+    "Flow.Paper.thm_1_2",
+    "Flow.Paper.thm_1_2_orders_40_44_48_50",
+    "Flow.Paper.thm_1_3"
+  ],
+  "definition_names": [],
+  "permitted_axioms": [
+    "propext",
+    "Quot.sound",
+    "Classical.choice"
+  ],
+  "enable_nanoda": true
+}

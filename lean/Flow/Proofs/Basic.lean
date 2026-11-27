@@ -1,11 +1,15 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Basic
-import Mathlib.Algebra.BigOperators.Module
-import Mathlib.Algebra.BigOperators.Ring.Finset
-import Mathlib.Data.Finset.Max
-import Mathlib.Data.List.Nodup
-import Mathlib.Tactic.Abel
-import Mathlib.Tactic.Linarith
+public import Flow.Defs.Basic
+public import Mathlib.Algebra.BigOperators.Module
+public import Mathlib.Algebra.BigOperators.Ring.Finset
+public import Mathlib.Data.Finset.Max
+public import Mathlib.Data.List.Nodup
+public import Mathlib.Tactic.Abel
+public import Mathlib.Tactic.Linarith
+
+@[expose] public section
 
 /-!
 # Section 2 proofs: flow algebra, reorientation, cycle extraction, and Lemma 2.1

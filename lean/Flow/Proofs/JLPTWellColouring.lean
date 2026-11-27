@@ -1,8 +1,12 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.Literature
-import Flow.Proofs.Basic
-import Flow.Proofs.Frames
-import Mathlib.Tactic
+public import Flow.Defs.Literature
+public import Flow.Proofs.Basic
+public import Flow.Proofs.Frames
+public import Mathlib.Tactic
+
+@[expose] public section
 
 /-!
 # Proof of the Jaeger–Linial–Payan–Tarsi (1992) Well-Colouring Lemma (`JLPTWellColouring`)
@@ -18,20 +22,20 @@ namespace Flow.Proofs
 
 open Flow
 
-private lemma spanningTree_card_edges {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
+lemma spanningTree_card_edges {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
     (G : Multigraph V E) (B : Finset E)
     (hT : (Multigraph.Subgraph.ofEdges G Finset.univ B (fun _ => Finset.mem_univ _) (fun _ => Finset.mem_univ _)).IsSpanningTree) :
     B.card + 1 = Fintype.card V :=
   spanningTree_edges_card hT
 
-private lemma isSpanningTree_of_connected_card {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
+lemma isSpanningTree_of_connected_card {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
     (G : Multigraph V E) (B : Finset E)
     (hconn : (Multigraph.Subgraph.ofEdges G Finset.univ B (fun _ => Finset.mem_univ _) (fun _ => Finset.mem_univ _)).Connected)
     (hcard : B.card + 1 = Fintype.card V) :
     (Multigraph.Subgraph.ofEdges G Finset.univ B (fun _ => Finset.mem_univ _) (fun _ => Finset.mem_univ _)).IsSpanningTree :=
   ⟨rfl, hconn, connected_edges_eq_verts_sub_one_isForest _ hconn (by change B.card + 1 = (Finset.univ : Finset V).card; rw [Finset.card_univ]; exact hcard)⟩
 
-private lemma disjoint_map_of_disjoint {α β : Type} [DecidableEq α] [DecidableEq β]
+lemma disjoint_map_of_disjoint {α β : Type} [DecidableEq α] [DecidableEq β]
     {s t : Finset α} (f : α ↪ β) (h : Disjoint s t) : Disjoint (s.map f) (t.map f) := by
   rw [Finset.disjoint_left]
   intro x hx1 hx2
@@ -39,11 +43,11 @@ private lemma disjoint_map_of_disjoint {α β : Type} [DecidableEq α] [Decidabl
   obtain ⟨b, hb, hab⟩ := Finset.mem_map.mp hx2
   exact Finset.disjoint_left.mp h ha (f.injective hab ▸ hb)
 
-private lemma val_eq_of_some_eq {α : Type} {P : α → Prop} {a b : {x : α // P x}}
+lemma val_eq_of_some_eq {α : Type} {P : α → Prop} {a b : {x : α // P x}}
     (h : (some a : Option {x : α // P x}) = some b) : a.1 = b.1 := by
   cases h; rfl
 
-private lemma red_isForest_of_wellColouring {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
+lemma red_isForest_of_wellColouring {V E : Type} [Fintype V] [Fintype E] [DecidableEq V] [DecidableEq E]
     (Qplus : Multigraph V E) (v₀ : V)
     (hcub : Qplus.IsCubic) (h3 : Qplus.IsEdgeConnected 3) (h4 : 4 ≤ Fintype.card V)
     (wc : WellColouring (Qplus.deleteVertex v₀)) :

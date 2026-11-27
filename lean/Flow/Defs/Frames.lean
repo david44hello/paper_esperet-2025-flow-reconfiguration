@@ -1,6 +1,11 @@
+module
+
 -- Copyright (C) Dave Goel 2026--now. Licensed under the Apache License 2.0; see LICENSE.
-import Flow.Defs.StepSystem
-import Mathlib.Basic.Real.Basic
+public import Flow.Defs.StepSystem
+public import Mathlib.Basic.Real.Basic
+
+@[expose] public section
+set_option backward.proofsInPublic true
 
 /-!
 # Good subgraphs, truncated cubic expansions, 2-constructions, well colourings, frames, and official cycles
